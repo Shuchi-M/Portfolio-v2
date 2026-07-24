@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@500;700&family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: theme('colors.bg');
+  background-image: linear-gradient(rgba(26, 20, 35, 0.7), rgba(26, 20, 35, 0.8)), url('/assets/image/journey-bg-tile.png');
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: top center;
+  color: theme('colors.textLight');
+  font-family: theme('fontFamily.body');
+  font-size: 1.3rem;
+}
+
+h1, h2 {
+  font-family: theme('fontFamily.heading');
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+@keyframes gentleBob {
+  0%, 100% { transform: translateY(-6px); }
+  50% { transform: translateY(6px); }
+}

@@ -1,3 +1,5 @@
+import { asset } from '../assetPath';
+
 interface Waypoint {
   label: string;
   href: string;
@@ -6,11 +8,11 @@ interface Waypoint {
 }
 
 const waypoints: Waypoint[] = [
-  { label: 'Education', href: '#education', cat: '/assets/image/Leraning-Cat.png', icon: '🏛️' },
-  { label: 'Experience', href: '#experience', cat: '/assets/image/Adventurer-cat.png', icon: '🗺️' },
-  { label: 'Projects', href: '#projects', cat: '/assets/image/Builder-Cat.png', icon: '⚔' },
-  { label: 'Research Archives', href: '#research', cat: '/assets/image/Scientist-Cat.png', icon: '📜' },
-  { label: 'Skills', href: '#skills', cat: '/assets/image/Wizard-Cat.png', icon: '🎒' },
+  { label: 'Education', href: '#education', cat: 'assets/image/Leraning-Cat.png', icon: '🏛️' },
+  { label: 'Experience', href: '#experience', cat: 'assets/image/Adventurer-cat.png', icon: '🗺️' },
+  { label: 'Projects', href: '#projects', cat: 'assets/image/Builder-Cat.png', icon: '⚔' },
+  { label: 'Research Archives', href: '#research', cat: 'assets/image/Scientist-Cat.png', icon: '📜' },
+  { label: 'Skills', href: '#skills', cat: 'assets/image/Wizard-Cat.png', icon: '🎒' },
 ];
 
 export default function About() {
@@ -22,11 +24,11 @@ export default function About() {
     >
       <div
         className="absolute inset-0 bg-cover bg-center opacity-35 z-0"
-        style={{ backgroundImage: "url('/assets/image/Tavern.png')" }}
+        style={{ backgroundImage: `url('${asset('assets/image/Tavern.png')}')` }}
       />
 
       <div className="relative z-10 flex flex-col items-center gap-8 w-full px-6">
-        <h2 className="font-title text-lg md:text-4xl">About Me</h2>
+        <h2 className="font-title text-3xl md:text-4xl">About Me</h2>
 
         <div className="bg-panel text-textDark border-[3px] border-panelBorder rounded-2xl p-6 shadow-lg max-w-[90%] md:max-w-[1300px] w-full text-left">
           <h2 className="font-heading text-sm text-center mb-3">Character Profile</h2>
@@ -54,13 +56,13 @@ export default function About() {
           {waypoints.map((wp) => (
             <div key={wp.label} className="relative pt-10">
               <img
-                src={wp.cat}
+                src={asset(wp.cat)}
                 alt=""
                 className="absolute -top-14 left-1/2 -translate-x-1/2 w-[130px] h-[120px] object-contain"
                 style={{ imageRendering: 'pixelated' }}
               />
-              <a
-                href={wp.href}
+              
+               <a href={wp.href}
                 className="inline-block font-body text-lg md:text-xl text-bg bg-accent border-[3px] border-textLight px-3.5 py-3 shadow-[4px_4px_0px_theme(colors.border)] transition-transform duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_theme(colors.border)]"
               >
                 {wp.icon} {wp.label}

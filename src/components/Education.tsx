@@ -1,3 +1,5 @@
+import { asset } from '../assetPath';
+
 interface Degree {
   program: string;
   academy: string;
@@ -46,7 +48,7 @@ export default function Education() {
             style={{ transformStyle: 'preserve-3d' }}
           >
             <img
-              src="/assets/image/graduate-cat.png"
+              src={asset('assets/image/graduate-cat.png')}
               alt=""
               className="absolute -top-14 -right-6 w-[110px] h-auto pointer-events-none"
               style={{ imageRendering: 'pixelated' }}
@@ -66,8 +68,8 @@ export default function Education() {
         ))}
       </div>
 
-      <a
-        href="#experience"
+      
+      <a  href="#experience"
         className="flex flex-col items-center gap-2 mt-16 mx-auto w-fit text-2xl no-underline text-textLight transition-transform hover:translate-y-1.5"
       >
         <span className="text-3xl text-accent animate-bounce">▼</span>

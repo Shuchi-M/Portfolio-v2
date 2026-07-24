@@ -1,3 +1,5 @@
+import { asset } from '../assetPath';
+
 interface SkillGroup {
   title: string;
   skills: { name: string; stars: string }[];
@@ -53,22 +55,24 @@ export default function Skills() {
   return (
     <section id="skills" className="relative w-screen -ml-[calc(50vw-50%)] px-6 py-20">
       <h2 className="text-center text-3xl md:text-4xl mb-10">🎒 Inventory</h2>
+
       <div
-  className="hidden lg:block absolute top-56 right-[3%] z-10"
-  style={{ animation: 'gentleBob 3.5s ease-in-out infinite' }}
->
-  <div className="flex flex-col items-center">
-    <div className="relative bg-panel border-4 border-panelBorder rounded-lg px-4 py-3 shadow-md mb-2 w-[220px] text-center">
-      <p className="text-textDark text-lg mb-0">Scroll down to discover my skill set!</p>
-    </div>
-    <img
-      src="/assets/image/Wizard-Cat.png"
-      alt=""
-      className="w-[130px] h-auto"
-      style={{ imageRendering: 'pixelated' }}
-    />
-  </div>
-</div>
+        className="hidden lg:block absolute top-56 right-[3%] z-10"
+        style={{ animation: 'gentleBob 3.5s ease-in-out infinite' }}
+      >
+        <div className="flex flex-col items-center">
+          <div className="relative bg-panel border-4 border-panelBorder rounded-lg px-4 py-3 shadow-md mb-2 w-[220px] text-center">
+            <p className="text-textDark text-lg mb-0">Scroll down to discover my skill set!</p>
+          </div>
+          <img
+            src={asset('assets/image/Wizard-Cat.png')}
+            alt=""
+            className="w-[130px] h-auto"
+            style={{ imageRendering: 'pixelated' }}
+          />
+        </div>
+      </div>
+
       <div className="max-w-[1300px] mx-auto">
         <div className="flex flex-col items-start" style={{ perspective: '1000px' }}>
           {groups.map((group, i) => (
@@ -92,7 +96,7 @@ export default function Skills() {
       </div>
 
       
-       <a href="#contact"
+      <a  href="#contact"
         className="flex flex-col items-center gap-2 mt-20 mx-auto w-fit text-2xl no-underline text-textLight transition-transform hover:translate-y-1.5"
       >
         <span className="text-3xl text-accent animate-bounce">▼</span>

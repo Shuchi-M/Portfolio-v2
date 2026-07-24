@@ -1,3 +1,5 @@
+import { asset } from '../assetPath';
+
 export default function Contact() {
   return (
     <footer id="contact" className="max-w-[900px] mx-auto px-6 pb-20">
@@ -16,8 +18,8 @@ export default function Contact() {
         </p>
         <p className="mb-1.5">
           <strong>LinkedIn:</strong>{' '}
-          <a
-            href="https://linkedin.com/in/shuchi-mishra-ks"
+          
+           <a href="https://linkedin.com/in/shuchi-mishra-ks"
             target="_blank"
             rel="noreferrer"
             className="text-panelBorder font-bold hover:text-textDark"
@@ -27,8 +29,8 @@ export default function Contact() {
         </p>
         <p className="mb-1.5">
           <strong>GitHub:</strong>{' '}
-          <a
-            href="https://github.com/Shuchi-M"
+          
+          <a  href="https://github.com/Shuchi-M"
             target="_blank"
             rel="noreferrer"
             className="text-panelBorder font-bold hover:text-textDark"
@@ -37,7 +39,7 @@ export default function Contact() {
           </a>
         </p>
         <p className="mb-0">
-          <a href="/resume.pdf" download className="text-panelBorder font-bold hover:text-textDark">
+          <a href={asset('resume.pdf')} download className="text-panelBorder font-bold hover:text-textDark">
             📄 Download Resume
           </a>
         </p>

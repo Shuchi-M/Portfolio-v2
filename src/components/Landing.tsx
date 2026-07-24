@@ -1,3 +1,5 @@
+import { asset } from '../assetPath';
+
 export default function Landing() {
   const scrollToAbout = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
@@ -14,7 +16,7 @@ export default function Landing() {
       {/* Background forest image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-70 z-0"
-        style={{ backgroundImage: "url('/assets/image/forest-silhouette.png')" }}
+        style={{ backgroundImage: `url('${asset('assets/image/forest-silhouette.png')}')` }}
       />
 
       {/* Accent border frame */}
@@ -65,12 +67,12 @@ export default function Landing() {
           >
             <div className="relative w-[280px]">
               <img
-                src="/assets/image/Cat-guide.png"
+                src={asset('assets/image/Cat-guide.png')}
                 alt="Guide cat"
                 className="w-full h-auto block"
                 style={{ imageRendering: 'pixelated' }}
               />
-              <div className="absolute -top-20 -right-20 bg-panel border-4 border-panelBorder rounded-lg px-4 py-3 w-[220px] shadow-md z-10">
+              <div className="absolute -top-20 -right-8 bg-panel border-4 border-panelBorder rounded-lg px-4 py-3 w-[220px] shadow-md z-10">
                 <p className="text-textDark leading-tight font-body text-xl mb-0">
                   Press the magic button to begin your tour!
                 </p>

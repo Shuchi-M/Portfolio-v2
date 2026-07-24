@@ -11,10 +11,6 @@
 body {
   margin: 0;
   background-color: theme('colors.bg');
-  background-image: linear-gradient(rgba(26, 20, 35, 0.7), rgba(26, 20, 35, 0.8)), url('/assets/image/journey-bg-tile.png');
-  background-repeat: repeat-y;
-  background-size: 100% auto;
-  background-position: top center;
   color: theme('colors.textLight');
   font-family: theme('fontFamily.body');
   font-size: 1.3rem;

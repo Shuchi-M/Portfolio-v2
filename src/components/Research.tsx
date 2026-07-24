@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { asset } from '../assetPath';
 
 interface ResearchPaper {
   key: string;
@@ -111,7 +112,7 @@ function buildBlocks(paper: ResearchPaper): Block[] {
   const blocks: Block[] = [
     {
       key: 'overview',
-      label: ' Overview',
+      label: '📖 Overview',
       content: (
         <>
           <p className="inline-block font-bold text-sm uppercase tracking-wide text-panel bg-accent2 px-2.5 py-1 rounded-md mb-4">
@@ -119,7 +120,7 @@ function buildBlocks(paper: ResearchPaper): Block[] {
           </p>
           <h3 className="mb-1 font-heading text-lg">
             
-        <a      href={paper.link}
+            <a  href={paper.link}
               target="_blank"
               rel="noreferrer"
               className="text-panelBorder hover:text-textDark underline decoration-dotted"
@@ -133,12 +134,12 @@ function buildBlocks(paper: ResearchPaper): Block[] {
     },
     {
       key: 'tldr',
-      label: "Quick Quest TL;DR",
+      label: "🏹 Quick Quest TL;DR",
       content: <p className="italic mb-0">{paper.tldr}</p>,
     },
     {
       key: 'mission',
-      label: ' Mission',
+      label: '🎯 Mission',
       content: <p className="mb-0">{paper.mission}</p>,
     },
     {
@@ -154,7 +155,7 @@ function buildBlocks(paper: ResearchPaper): Block[] {
     },
     {
       key: 'skills',
-      label: ' Skills Unlocked',
+      label: '🧙 Skills Unlocked',
       content: (
         <div className="flex flex-wrap gap-2">
           {paper.skillsUnlocked.map((skill) => (
@@ -178,7 +179,7 @@ function buildBlocks(paper: ResearchPaper): Block[] {
   blocks.push(
     {
       key: 'takeaways',
-      label: ' What I Took Away',
+      label: '🎒 What I Took Away',
       content: (
         <ul className="pl-5 list-disc">
           {paper.takeaways.map((t, i) => (
@@ -189,7 +190,7 @@ function buildBlocks(paper: ResearchPaper): Block[] {
     },
     {
       key: 'stats',
-      label: ' Character Stats',
+      label: '📊 Character Stats',
       content: (
         <div className="font-body text-lg">
           {paper.stats.map((stat) => (
@@ -234,7 +235,7 @@ export default function Research() {
       <div className="flex flex-col lg:flex-row lg:items-start gap-10 w-[92vw] max-w-[1400px] mx-auto">
         {/* Left column: heading, tabs, scrolling cards, scroll hint */}
         <div className="flex-1 min-w-0">
-          <h2 className="text-left text-3xl md:text-4xl mb-6">📜 Research Archive</h2>
+          <h2 className="text-left text-3xl md:text-4xl mb-6">📚 Research Archive</h2>
 
           <div className="flex gap-3 flex-wrap mb-6">
             {papers.map((paper) => (
@@ -263,7 +264,7 @@ export default function Research() {
                   key={block.key}
                   className="flex-shrink-0 w-[320px] md:w-[380px] snap-center bg-panel text-textDark border-[3px] border-panelBorder rounded-2xl p-6 shadow-lg"
                 >
-                  <p className="text-lg font-bold uppercase tracking-wide mb-2 opacity-80">
+                  <p className="text-lg font-bold uppercase tracking-wide mb-2 opacity-90">
                     {block.label}
                   </p>
                   {block.content}
@@ -280,7 +281,7 @@ export default function Research() {
         {/* Right column: cat + Developer Commentary, pinned top-right */}
         <div className="w-full lg:w-[320px] flex-shrink-0 flex flex-col items-center lg:items-start gap-3">
           <img
-            src="/assets/image/graduate-cat.png"
+            src={asset('assets/image/graduate-cat.png')}
             alt=""
             className="w-[90px] h-auto"
             style={{ imageRendering: 'pixelated' }}
@@ -298,7 +299,7 @@ export default function Research() {
       </div>
 
       
-       <a href="#skills"
+      <a  href="#skills"
         className="flex flex-col items-center gap-2 mt-16 mx-auto w-fit text-2xl no-underline text-textLight transition-transform hover:translate-y-1.5"
       >
         <span className="text-3xl text-accent animate-bounce">▼</span>

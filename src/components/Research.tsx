@@ -112,7 +112,7 @@ function buildBlocks(paper: ResearchPaper): Block[] {
   const blocks: Block[] = [
     {
       key: 'overview',
-      label: '📖 Overview',
+      label: ' Overview',
       content: (
         <>
           <p className="inline-block font-bold text-sm uppercase tracking-wide text-panel bg-accent2 px-2.5 py-1 rounded-md mb-4">
@@ -134,12 +134,12 @@ function buildBlocks(paper: ResearchPaper): Block[] {
     },
     {
       key: 'tldr',
-      label: "🏹 Quick Quest TL;DR",
+      label: " Quick Quest TL;DR",
       content: <p className="italic mb-0">{paper.tldr}</p>,
     },
     {
       key: 'mission',
-      label: '🎯 Mission',
+      label: ' Mission',
       content: <p className="mb-0">{paper.mission}</p>,
     },
     {
@@ -155,11 +155,11 @@ function buildBlocks(paper: ResearchPaper): Block[] {
     },
     {
       key: 'skills',
-      label: '🧙 Skills Unlocked',
+      label: ' Skills Unlocked',
       content: (
         <div className="flex flex-wrap gap-2">
           {paper.skillsUnlocked.map((skill) => (
-            <span key={skill} className="text-xs font-bold bg-accent text-bg px-2 py-1 rounded-md">
+            <span key={skill} className="text-base font-bold bg-accent text-bg px-2 py-1 rounded-md">
               {skill}
             </span>
           ))}
@@ -179,7 +179,7 @@ function buildBlocks(paper: ResearchPaper): Block[] {
   blocks.push(
     {
       key: 'takeaways',
-      label: '🎒 What I Took Away',
+      label: ' What I Took Away',
       content: (
         <ul className="pl-5 list-disc">
           {paper.takeaways.map((t, i) => (
@@ -190,7 +190,7 @@ function buildBlocks(paper: ResearchPaper): Block[] {
     },
     {
       key: 'stats',
-      label: '📊 Character Stats',
+      label: 'Character Stats',
       content: (
         <div className="font-body text-lg">
           {paper.stats.map((stat) => (
@@ -235,7 +235,7 @@ export default function Research() {
       <div className="flex flex-col lg:flex-row lg:items-start gap-10 w-[92vw] max-w-[1400px] mx-auto">
         {/* Left column: heading, tabs, scrolling cards, scroll hint */}
         <div className="flex-1 min-w-0">
-          <h2 className="text-left text-3xl md:text-4xl mb-6">📚 Research Archive</h2>
+          <h2 className="text-left text-3xl md:text-4xl mb-6">📜 Research Archive</h2>
 
           <div className="flex gap-3 flex-wrap mb-6">
             {papers.map((paper) => (

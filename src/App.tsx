@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { asset } from './assetPath';
+import SideNav from './components/SideNav';
 import Landing from './components/Landing';
 import About from './components/About';
 import Education from './components/Education';
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <>
+      <SideNav />
       <Landing />
       <main className="max-w-[900px] mx-auto px-6">
         <About />

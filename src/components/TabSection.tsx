@@ -45,7 +45,7 @@ export default function TabSection({ id, heading, tabs, nextHref, nextLabel }: T
       <div className="w-[90%] md:w-[1100px] max-w-full mx-auto">
         <div
           key={activeTab.key}
-          className="bg-panel text-textDark border-[3px] border-panelBorder rounded-2xl p-8 shadow-lg animate-[fadeIn_300ms_ease]"
+          className="bg-panel text-textDark border-[3px] border-panelBorder rounded-2xl p-5 md:p-8 shadow-lg animate-[fadeIn_300ms_ease]"
         >
           <p
             className={`inline-block font-bold text-sm uppercase tracking-wide px-2.5 py-1 rounded-md mb-4 text-panel ${

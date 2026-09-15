@@ -56,13 +56,14 @@ export default function Landing() {
           <button
             id="start-journey-btn"
             onClick={scrollToAbout}
-            className="font-body text-2xl text-bg bg-accent border-[3px] border-textLight px-9 py-4 cursor-pointer shadow-[4px_4px_0px_theme(colors.border)] transition-transform duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_theme(colors.border)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_theme(colors.border)]"
+            className="font-body text-xl md:text-2xl text-bg bg-accent border-[3px] border-textLight px-6 md:px-9 py-3 md:py-4 cursor-pointer shadow-[4px_4px_0px_theme(colors.border)] transition-transform duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_theme(colors.border)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_theme(colors.border)]"
           >
             Start Your Tour
           </button>
 
+          {/* Desktop guide cat: unchanged, absolutely positioned beside the button */}
           <div
-            className="absolute top-full left-full mt-2 ml-2"
+            className="hidden md:block absolute top-full left-full mt-2 ml-2"
             style={{ animation: 'gentleBob 3.5s ease-in-out infinite' }}
           >
             <div className="relative w-[280px]">
@@ -79,6 +80,24 @@ export default function Landing() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Mobile guide cat: stacked centered below the button, in normal flow so it can't overflow */}
+        <div
+          className="md:hidden flex flex-col items-center"
+          style={{ animation: 'gentleBob 3.5s ease-in-out infinite' }}
+        >
+          <div className="relative bg-panel border-4 border-panelBorder rounded-lg px-4 py-2.5 shadow-md mb-2 max-w-[240px] text-center">
+            <p className="text-textDark leading-tight font-body text-base mb-0">
+              Press the magic button to begin your tour!
+            </p>
+          </div>
+          <img
+            src={asset('assets/image/Cat-guide.png')}
+            alt="Guide cat"
+            className="w-[150px] h-auto"
+            style={{ imageRendering: 'pixelated' }}
+          />
         </div>
       </div>
     </section>

@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   background-color: theme('colors.bg');
@@ -24,4 +28,9 @@ h1, h2 {
 @keyframes gentleBob {
   0%, 100% { transform: translateY(-6px); }
   50% { transform: translateY(6px); }
+}
+
+@keyframes navPulse {
+  0%, 100% { transform: scale(1); box-shadow: 4px 0px 0px theme('colors.border'); }
+  50% { transform: scale(1.1); box-shadow: 7px 0px 0px theme('colors.border'); }
 }

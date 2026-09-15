@@ -44,7 +44,7 @@ export default function Education() {
         {degrees.map((deg) => (
           <div
             key={deg.program}
-            className="relative bg-panel text-textDark border-[3px] border-panelBorder rounded-2xl p-8 shadow-lg w-full md:flex-none md:w-[600px] transition-transform duration-200 hover:-translate-y-5 hover:scale-105 hover:shadow-2xl"
+            className="relative bg-panel text-textDark border-[3px] border-panelBorder rounded-2xl p-5 md:p-8 shadow-lg w-full md:flex-none md:w-[600px] transition-transform duration-200 hover:-translate-y-5 hover:scale-105 hover:shadow-2xl"
             style={{ transformStyle: 'preserve-3d' }}
           >
             <img
